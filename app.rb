@@ -8,7 +8,7 @@ end
 
 post '/contact' do 
   Pony.mail({
-    :to => 'corinne@stuckwithpins.com',
+    :to => ENV['EMAIL'],
     :subject => params[:name] + " has RSVP'd",
     :body => "Names(s): #{params[:name]}
               Email: #{params[:email]}
@@ -19,8 +19,8 @@ post '/contact' do
       :address              => 'smtp.gmail.com',
       :port                 => '587',
       :enable_starttls_auto => true,
-      :user_name            => 'rigel@rigel.co',
-      :password             => 'armour471003',
+      :user_name            => ENV['GMAIL_USERNAME'],
+      :password             => ENV['GMAIL_PASSWORD'],
       :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
       :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
     }
