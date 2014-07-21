@@ -1,0 +1,390 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<![endif]-->
+<head>
+
+<link rel="icon" 
+      type="image/png" 
+      href="images/favicon2.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corinne &amp; Dave Are Getting Married!</title>
+
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<script src="js/lean-slider.js"></script>
+<script src="js/jquery.scrollTo-min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="css/lean-slider.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700' rel='stylesheet' type='text/css'>
+<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript">
+	// static navigation bar
+	var num = 50; //number of pixels before modifying styles
+	
+	$(window).bind('scroll', function () {
+		if ($(window).scrollTop() > num) {
+			$('.menu').addClass('fixed');
+		} else {
+			$('.menu').removeClass('fixed');
+		}
+	});
+	
+	$(window).bind('scroll', function () {
+		if ($(window).scrollTop() > num) {
+			$('.mobile_menu').addClass('fixed');
+		} else {
+			$('.mobile_menu').removeClass('fixed');
+		}
+	});
+	
+	// back to top button
+	jQuery(document).ready(function($) {
+	 
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+		});
+	});
+
+
+	// masonry flow of event info sections
+	 $(function(){
+	 var $more_details_container = $('#more_details_container');
+	   	$more_details_container.imagesLoaded( function(){
+		$more_details_container.masonry({
+		itemSelector : '.more_details'
+		 });
+	   }); 
+	 });
+	 
+	var $container = $('#container');
+	// initialize Masonry after all images have loaded  
+		$container.imagesLoaded( function() {
+	  	$container.masonry();
+	});
+
+
+	// accordion drop down
+	$(function() {
+    $( "#accordion" ).accordion({
+		collapsible: true,
+		active: false});
+  	});
+	
+	
+	// smooth scroll
+	$(document).ready(function(){
+    $('.menu a').click(function(){
+        $.scrollTo(this.hash, 800);
+        return false;
+    });
+	});
+	
+	$(document).ready(function(){
+    $('.mobile_menu a').click(function(){
+        $.scrollTo(this.hash, 800);
+        return false;
+    });
+	});
+</script>
+
+
+
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+
+<body>
+
+<div id="top"></div>
+
+<div class="gridContainer">
+
+<header>
+    <div class="menu">
+		<ul class="clearfix">
+            <li><a href="#ourstory_wrapper">Our Story</a></li>
+            <li><a href="#festivities_wrapper">The Festivities</a></li>
+            <li><a href="#slider">Photos</a></li>
+            <li><a href="#party_wrapper">Meet the Party</a></li>
+            <li><a href="#registry_wrapper">Registry</a></li>
+            <li><a href="#rsvp_wrapper">RSVP</a></li>
+        </ul>
+    </div>
+    
+    <div class="mobile_menu">
+		<ul class="clearfix">
+            <li><a href="#ourstory_wrapper">Our Story</a></li>
+            <li><a href="#festivities_wrapper">Info</a></li>
+            <li><a href="#slider">Photos</a></li>
+            <li><a href="#registry_wrapper">Registry</a></li>
+            <li><a href="#rsvp_wrapper">RSVP</a></li>
+        </ul>
+    </div>
+</header>
+
+<div id="ourstory_wrapper">
+    <div id="ourstory_main">
+        <h1>Our Story</h1>
+        <h2>Finding Love On Myspace</h2>
+        <div class="videowrapper">
+        	<iframe src="http://player.vimeo.com/video/91249578?title=0&amp;byline=0&amp;portrait=0&amp;color=d2a862" width="900" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <p>Video by <a href="https://vimeo.com/iamzachandrews" target="_blank">Zach Andrews</a></p> 
+    </div>
+</div>
+
+<div id="festivities_wrapper" class="clearfix">
+	<div id="festivites_main">
+    	<h1>The Festivities</h1>
+        <h2>September 6th, 2014  |  Bailey's Palomar Resort</h2>
+       
+        <section class="event_details">
+            <img src="images/icon-rings.png" alt="I Do's">
+            <h3>I Do's</h3>
+            <h4>Ceremony 3:30PM</h4>
+            <p>We will exchange vows & be married under the old walnut trees overlooking the meadow atop Palomar Mountain at Bailey's Palomar Resort.<br><br>
+			</p>
+        </section>
+        
+        <section class="event_details">
+            <img src="images/icon-drinks.png" alt="Booze">
+            <h3>Booze</h3>
+            <h4>Cocktails 5:30PM</h4>
+            <p>Let's get the party started! Immediately following the ceremony, gather outside the Bailey's historic dance hall for refreshments, signature cocktails, & backyard games.</p>
+        </section>
+        
+        <section class="event_details">
+            <img src="images/icon-forkknife.png" alt="Rendezvous">
+            <h3>Rendezvous</h3>
+            <h4>Reception 6:30PM</h4>
+            <p>Grub down on street tacos, clink your glasses to a few sentimental speeches, and then hit the dance floor with us. Make sure to bring your rug-cutting shoes!</p>
+        </section>
+        
+        <div class="clearfix"></div>
+        
+        <div id="more_details_link">
+        	<p><a href="moredetails.html"><h4>More Event Details</h4></a></p>
+        </div>
+           
+           
+           
+		<div id="accordion">
+			<h4>More Event Details</h4>
+				<div>
+					<div id="more_details_container">
+                        <div class="more_details">
+                            <h4>Location</h4>
+                            <p>33691 Bailey Meadow Rd<br> Palomar Mountain, CA 92060</p>
+                            <p><b>DIRECTIONS</b><br>
+                            &bull; Take Valley Center Rd to I-76 E<br>
+                            &bull; Make a slight left onto Palomar Mountain Rd<br>
+                            &bull; Continue up the mountain & make a left onto S Grade Rd<br>
+                            &bull; When you see Mother's Kitchen, turn left onto State Park Rd<br>
+                            &bull; Turn right onto Bailey Meadow Rd<br>
+                            &bull; Follow Fern Trail all the way through to the end of the road
+                            </p>
+                        </div>
+
+                        <div class="more_details">
+                            <h4>Attire</h4>
+                            <p>Dressy / Smart Casual</p>
+                            <p><b>GUYS</b><br>
+                            &bull; Button up, collared shirt<br>
+                            &bull; Dress pants, dark jeans<br>
+                            &bull; Dress shoes, boots<br>
+                            &bull; Tie or other dapper accessories recommended<br>
+                            </p>
+                            <p><b>GALS</b><br>
+                            &bull; Dress, skirt<br>
+                            &bull; Nice pants with dressy top<br>
+                            &bull; Flats, boots, wedges<br>
+                            &bull; Heels highly discouraged (due to uneven terrain)<br>
+                            </p>
+                        </div>
+
+                        <div class="more_details">
+                            <h4>Dinner</h4>
+                            <p>Authentic carne asada and pollo asado street tacos with rice & beans plus homemade chips & salsa will be served following cocktail hour!		</p>
+                            <p>¡Delicioso!</p>
+                            
+                        </div>
+                        
+                        <div class="more_details">
+                            <h4>Travel Considerations</h4>
+                            <p>The trip up Palomar Mt is steep and twisty, so keep that in mind during your trek and allow enough time to get here before the festivities begin. You don't wanna miss it!</p>
+                            <p>While parking is available at the venue and along the road, we encourage carpooling.</p>
+                        </div>
+                        
+                        <div class="more_details">
+                            <h4>Accommodations</h4>
+                            <p>If you're traveling from out of town or just want to enjoy the weekend in the beautiful mountains, Baileys has several options for staying at or near the venue (including luxury campsites, if you're feeling especially adventurous).</p>
+                            <p>Ask us for more info.</p>
+                        </div>
+                        
+                        <div class="more_details">
+                            <h4>Other Info</h4>
+                            <p>&bull; Children are welcome</p>
+                            <p>&bull; No handicap accessibility</p>
+                            <p>&bull; Again, avoid wearing heels</p>
+                        </div>
+                </div>
+		</div>
+</div>
+    
+</div></div>
+
+
+<a id="jump-photos"></a>
+	<div class="slider-wrapper">
+		<div id="slider">
+    		<div class="slide1">
+        		<img src="images/sample-photo.jpg" alt="">
+			</div>
+			<div class="slide2">
+				<img src="images/sample-photo2.jpg" alt="">
+			</div>
+       		<div class="slide3">
+        		<img src="images/sample-photo3.jpg" alt="">
+			</div>
+		</div>      
+		<div id="slider-direction-nav"></div>
+		<div id="slider-control-nav"></div>
+	</div>
+    
+    <script type="text/javascript">
+		$(document).ready(function() {
+			var slider = $('#slider').leanSlider({
+				directionNav: '#slider-direction-nav',
+				controlNav: '#slider-control-nav'
+			});
+		});
+	</script>
+
+<div id="party_wrapper">
+	<a id="jump-party"></a>
+	<div id="party_main">
+    	<h1>Meet the Party</h1>
+        <h2>Our Wedding Day Crew</h2>
+        
+        <div id="attendants_wrapper_row1"  class="clearfix">
+    	<section class="party_attendant_row1">
+        	<img src="images/party-jena.png" alt="Jena">
+            <h4>Jena</h4>
+            <p>Sister of the bride, best friend for life, & maid-of-honor</p>
+        </section>
+        <section class="party_attendant_row1">
+        	<img src="images/party-matt.png" alt="Matt">
+            <h4>Matt</h4>
+            <p>Brother of the groom & best man</p>
+        </section>
+        <section class="party_attendant_row1">
+        	<img src="images/party-zach.png" alt="Zach">
+            <h4>Zach</h4>
+            <p>Shared best friend & professional third-wheel traveling partner</p>
+        </section>
+        <section class="party_attendant_row1">
+        	<img src="images/party-estradas.png" alt="Steve & Sara">
+            <h4>Steve & Sara</h4>
+            <p>Childhood shenanigan accomplice & one-and-only sassy Southerner</p>
+        </section>
+        </div>
+        
+        <div id="attendants_wrapper_row2"  class="clearfix">
+        <section class="party_attendant_row2">
+        	<img src="images/party-anderbergs.png" alt="Paul & Ali">
+            <h4>Paul & Ali</h4>
+            <p>Favorite future parents of ginger children & funniest people we know</p>
+        </section>
+        <section class="party_attendant_row2">
+        	<img src="images/party-taylors.png" alt="Nick & Nicole">
+            <h4>Nick & Nicole</h4>
+            <p>Long-time friends & Comic Con weekend partners-in-crime</p>
+        </section>
+        <section class="party_attendant_row2">
+        	<img src="images/party-dani.png" alt="Dani">
+            <h4>Dani</h4>
+            <p>Fellow fashionista & flea market wingwoman<br><br></p>
+        </section>
+        </div> 
+    </div>   
+</div>
+
+
+<div id="registry_wrapper">
+    <div id="registry_main">
+        <a id="jump-registry"></a>
+        <h1>Registry</h1>
+        <h2>A Few Gift Suggestions</h2>
+        <p>Thank you so much for being a part of our lives & celebrating with us as we embark on this grand adventure that is married life. If you'd like to equip us for the journey and bless us with some nesting needs, you can find our registries at the following stores by clicking each logo below!</p>
+        <a href="http://www.target.com/wedd/registry/4HKGPXAo1wkCSsw-tAashg" target="_blank"><img src="images/registry-target.png" alt="Target Registry"></a>  <a href="http://www.surlatable.com/registry/giftRegistryList.jsp?id=200925591166" target="_blank"><img src="images/registry-surlatable.png" alt="Sur La Table Registry"></a>
+	<a href="https://www.zola.com/registry/corinneanddave" target="_blank"><img src="images/registry-zola.png" alt-"MyRegistry"></a>
+    </div>
+</div>
+
+<div id="rsvp_wrapper">
+	<a id="jump-rsvp"></a>
+	<div id="rsvp_main">
+    	<h1>RSVP</h1>
+        <h2>It's Not A Party Without You!</h2>
+        <p>Please use the form below to RSVP as soon as possible, by <b>August 9th, 2014</b> at the latest. Space is limited, so although we'd love to have the whole world party it up with us, we've worked hard to narrow it down to only our nearest and dearest and kindly ask that you only RSVP for guests who have been formally invited. If you have any questions about this, feel free to contact us. We love you and can't wait to celebrate with you!</p>
+        <form method="POST" action="/contact">
+          
+          <label for="name">Name</label>
+          <input name="name" type="name"  id="name" placeholder="Enter name"> <br />
+
+          <label for="email">Email address</label>
+          <input name="email" type="email" id="email" placeholder="Enter email"><br />
+
+          <label>Attending?</label><br />
+
+          <label class="radio-inline">
+            <input name="rsvp" type="radio" id="inlineCheckbox1" value="attending"> Wouldn't Miss it!
+          </label>
+          <label class="radio-inline">
+            <input name="rsvp" type="radio" id="inlineCheckbox2" value="not_attending"> Super Bummed, can't make it, but will be there in spirt
+          </label><br />
+
+          <label for="message">Special Message</label>
+          <textarea name="message" rows="3"></textarea>    
+         <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+      </div>
+</div>
+    
+</div>
+
+<div id="footer">
+	<p>Site created by the bride (<a href="http://www.stuckwithpins.com">stuckwithpins.com</a>)</p>
+</div>
+
+<div class="back-to-top" id="back-top">
+<a href="javascript:void(0)" class="back-to-top">Top</a>
+</div>
+
+<script>
+	$(function(){$("#back-top").hide();$(window).scroll(function(){if($(this).scrollTop()>150){$('#back-top').fadeIn();
+	}else{$('#back-top').fadeOut();}});});jQuery('.back-to-top').click(function()
+	{jQuery('html, body').animate({scrollTop:0},'slow')
+		;}
+	);
+</script>
+
+</body>
+</html>
