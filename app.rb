@@ -8,7 +8,7 @@ end
 
 post '/contact' do 
   Pony.mail({
-    :to => 'rigel@rigel.co',
+    :to => 'corinne@stuckwithpins.com',
     :subject => params[:name] + " has RSVP'd",
     :body => "Names(s): #{params[:name]}
               Email: #{params[:email]}
